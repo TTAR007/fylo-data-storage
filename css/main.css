@@ -7,11 +7,206 @@
 
 body {
   font-family: "Raleway", sans-serif;
+  min-height: 100vh;
+  padding-block: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url(/images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+main {
+  min-width: 13.75rem;
+  max-width: 33.75rem;
+  width: 90%;
+}
+
+section {
+  background-color: hsl(228, 56%, 26%);
+  padding: 2.25rem;
+}
+
+.fylo_box {
+  border-radius: 0.5rem 5rem 0.5rem 0.5rem;
+  margin-block-end: 1rem;
+}
+
+.logo_box {
+  width: fit-content;
+  margin-block-end: 2rem;
+}
+.logo_box img {
+  width: max-content;
+}
+
+.option_box {
+  display: flex;
+  gap: 1rem;
+}
+.option_box figure {
+  background-color: hsl(229, 57%, 11%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.option_box figure img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+}
+.option_box figure:hover {
+  border: 0.125rem solid white;
+  cursor: pointer;
+}
+.option_box figure:hover img {
+  opacity: 0.3;
+}
+
+.storage_box {
+  position: relative;
+  border-radius: 0.5rem;
+  padding-block-start: 2rem;
+  padding-block-end: 3rem;
+}
+.storage_box p {
+  color: hsl(243, 100%, 93%);
+  font-weight: 400;
+}
+
+.remaining-storage_box {
+  background-color: white;
+  position: absolute;
+  bottom: -2.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-block: 0.625rem;
+  padding-inline: 1.25rem;
+  border-radius: 0.5rem;
+}
+.remaining-storage_box p {
+  min-width: 7.875rem;
+  color: hsl(229, 7%, 55%);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+.remaining-storage_box p span {
+  font-size: 2.5rem;
+  color: black;
+  vertical-align: middle;
+}
+
+.remaining-storage_text-box {
+  position: relative;
+}
+
+.triangle {
+  display: none;
+  position: absolute;
+  right: -1.25rem;
+  bottom: -2.5rem;
+  border-right: solid 1.875rem rgb(255, 255, 255);
+  border-bottom: solid 1.875rem transparent;
+  width: 50px;
+  height: 50px;
+}
+
+.usage-message {
+  font-size: 0.875rem;
+  text-align: center;
+}
+.usage-message span {
+  font-weight: 700;
+}
+
+.bar_box {
+  background-color: hsl(229, 57%, 11%);
+  height: 1.125rem;
+  padding: 0.15625rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-block: 1rem;
+  margin-block-end: 0.5rem;
+}
+
+.bar_gradient {
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  height: 100%;
+  width: 75%;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.bar_white-circle {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  position: absolute;
+  right: 0.125rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.capacity_box {
+  display: flex;
+  justify-content: space-between;
+}
+.capacity_box p {
+  font-weight: 700;
 }
 
 .attribution {
   font-size: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  color: white;
+  text-align: center;
 }
 .attribution a {
-  color: darkmagenta;
+  color: rgb(255, 162, 255);
+}
+
+@media (min-width: 62.5rem) {
+  body {
+    background-image: url(/images/bg-desktop.png);
+    background-size: contain;
+    background-position: bottom;
+    background-color: hsl(229, 57%, 11%);
+  }
+  main {
+    max-width: 56.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    align-items: end;
+    gap: 2rem;
+  }
+  .fylo_box {
+    margin: 0;
+  }
+  .usage-message {
+    text-align: start;
+  }
+  .remaining-storage_box {
+    top: 0;
+    bottom: auto;
+    right: 2.25rem;
+    left: auto;
+    transform: translate(0, -70%);
+  }
+  .triangle {
+    display: block;
+  }
 }

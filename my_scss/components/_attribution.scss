@@ -2,8 +2,12 @@
 
 .attribution {
     font-size: $base-fs;
+    position: absolute;
+    bottom: 1rem;
+    color: white;
+    text-align: center;
 
     a {
-        color: darkmagenta;
+        color: rgb(255, 162, 255);
     }
 }

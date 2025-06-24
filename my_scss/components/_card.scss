@@ -1,0 +1,151 @@
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+
+section {
+    background-color: $Blue-dark;
+    padding: rem(36);
+}
+
+.fylo_box {
+    border-radius: 0.5rem 5rem 0.5rem 0.5rem;
+    margin-block-end: 1rem;
+}
+
+.logo_box {
+    width: fit-content;
+    margin-block-end: 2rem;
+    
+    img {
+        width: max-content;
+    }
+}
+
+.option_box {
+    display: flex;
+    gap: 1rem;
+
+    figure {
+        background-color: $Blue-very-dark;
+        width: rem(48);
+        height: rem(48);
+        border-radius: rem(8);
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
+        }
+    }
+
+    figure:hover {
+        border: rem(2) solid white;
+        cursor: pointer;
+
+        img {
+            opacity: 0.3;
+        }
+    }
+}
+
+.storage_box {
+    position: relative;
+    border-radius: rem(8);
+    padding-block-start: rem(32);
+    padding-block-end: rem(48);
+
+    p {
+        color: $Blue-light;
+        font-weight: $w400;
+    }
+}
+
+.remaining-storage_box {
+    background-color: white;
+    position: absolute;
+    bottom: -(rem(36));
+    left: 50%;
+    transform: translateX(-50%);
+    padding-block: rem(10);
+    padding-inline: rem(20);
+    border-radius: rem(8);
+    
+    p {
+        min-width: rem(126);
+        color: $Grayish-Blue;
+        font-weight: $w700;
+        font-size: $small-fs;
+        text-transform: uppercase;
+
+        span {
+            font-size: $large-fs;
+            color: black;
+            vertical-align: middle;
+        }
+    }
+}
+
+.remaining-storage_text-box {
+    position: relative;
+}
+
+.triangle {
+    display: none;
+    position: absolute;
+    right: rem(-20);
+    bottom: rem(-40);
+    border-right: solid rem(30) rgb(255, 255, 255);
+    border-bottom: solid rem(30) transparent;
+    width: 50px;
+    height: 50px;
+}
+
+.usage-message {
+    font-size: $small-fs;
+    text-align: center;
+
+    span {
+        font-weight: $w700;
+    }
+}
+
+.bar_box {
+    background-color: $Blue-very-dark;
+    height: rem(18);
+    padding: rem(2.5);
+    border-radius: rem(8);
+    overflow: hidden;
+    margin-block: 1rem;
+    margin-block-end: 0.5rem;
+}
+
+.bar_gradient {
+    background-image:
+    linear-gradient(to right, $Gradient_1, $Gradient_2);
+    height: 100%;
+    width: 75%;
+    border-radius: rem(8);
+    position: relative;
+}
+
+.bar_white-circle {
+    background-color: white;
+    border-radius: rem(8);
+    width: rem(10);
+    height: rem(10);
+    position: absolute;
+    right: rem(2);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.capacity_box {
+    display: flex;
+    justify-content: space-between;
+    
+    p {
+        font-weight: $w700;
+    }
+}

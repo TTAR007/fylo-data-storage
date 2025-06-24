@@ -1,0 +1,40 @@
+@use '../utils/functions' as *;
+@use '../utils/variables' as *;
+
+@media (min-width: rem(1000)) {
+    body {
+        background-image: url(/images/bg-desktop.png);
+        background-size: contain;
+        background-position: bottom;
+
+        background-color: $Blue-very-dark;
+    }
+
+    main {
+        max-width: rem(900);
+        display: grid;
+        grid-template-columns: 1fr 1.6fr;
+        align-items: end;
+        gap: 2rem;
+    }
+
+    .fylo_box {
+        margin: 0;
+    }
+
+    .usage-message {
+        text-align: start;
+    }
+
+    .remaining-storage_box {
+        top: 0;
+        bottom: auto;
+        right: rem(36);
+        left: auto;
+        transform: translate(0, -70%);
+    }
+
+    .triangle {
+        display: block;
+    }
+}
