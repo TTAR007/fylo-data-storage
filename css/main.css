@@ -13,7 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: url(/images/bg-mobile.png);
+  background-image: url("/images/bg-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -181,7 +181,7 @@ section {
 
 @media (min-width: 62.5rem) {
   body {
-    background-image: url(/images/bg-desktop.png);
+    background-image: url("/images/bg-desktop.png");
     background-size: contain;
     background-position: bottom;
     background-color: hsl(229, 57%, 11%);
