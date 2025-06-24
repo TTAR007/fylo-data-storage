@@ -1,0 +1,9 @@
+@use '../utils/variables' as *;
+
+.attribution {
+    font-size: $base-fs;
+
+    a {
+        color: darkmagenta;
+    }
+}
